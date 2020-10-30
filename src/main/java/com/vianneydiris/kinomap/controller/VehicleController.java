@@ -9,11 +9,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type Vehicle controller.
+ */
 @Controller
 public class VehicleController {
     private VehicleService vehicleService;
     private List<Vehicle> vehicles;
 
+    /**
+     * Instantiates a new Vehicle controller.
+     *
+     * @param vehicleService the vehicle service
+     */
     public VehicleController(VehicleService vehicleService) {
         this.vehicleService = vehicleService;
         Vehicle vehicle1 = new Vehicle( 3L,"4x4",null,new Icon(new Anchor(33,32),
@@ -25,9 +33,14 @@ public class VehicleController {
         vehicles = new ArrayList<>();
         vehicles.add(vehicle1);
         vehicles.add(vehicle2);
-
     }
 
+    /**
+     * Main string.
+     *
+     * @param model the model
+     * @return the view
+     */
     @GetMapping("/")
     public String main(Model model) {
         model.addAttribute("vehicles", vehicles);
