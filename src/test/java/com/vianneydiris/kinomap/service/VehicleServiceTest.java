@@ -1,19 +1,25 @@
-package com.vianneydiris.kinomap;
+package com.vianneydiris.kinomap.service;
 
 import com.vianneydiris.kinomap.model.Vehicle;
-import com.vianneydiris.kinomap.service.VehicleService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.junit.jupiter.MockitoExtension;
-
 
 import java.util.List;
 
-@ExtendWith(MockitoExtension.class)
-public class VehicleServiceTest {
+import static org.junit.jupiter.api.Assertions.*;
+
+/**
+ * The type Vehicle service test.
+ */
+class VehicleServiceTest {
+    /**
+     * The Service.
+     */
     VehicleService service = new VehicleService();
 
+    /**
+     * Get all vehicles tests.
+     */
     @Test
     public void getAllVehiclesTests(){
         List<Vehicle> vehicles = service.getAllVehicles();
