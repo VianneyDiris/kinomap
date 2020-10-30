@@ -7,10 +7,12 @@ import lombok.*;
  */
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class Url {
+    public Url() {
+    }
+
     private String left;
     private String right;
     private String size50x50;

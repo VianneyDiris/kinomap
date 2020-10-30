@@ -7,10 +7,12 @@ import lombok.*;
  */
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class Anchor {
+    public Anchor() {
+    }
+
     private int x;
     private int y;
 }

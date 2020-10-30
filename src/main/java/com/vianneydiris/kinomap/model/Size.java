@@ -7,10 +7,12 @@ import lombok.*;
  */
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class Size {
+    public Size() {
+    }
+
     private int height;
     private int width;
 }
